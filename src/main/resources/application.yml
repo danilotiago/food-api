@@ -1,13 +1,15 @@
 spring:
-    datasource:
-      url: ${DATABASE_URL}
-      username: ${DATABASE_USERNAME}
-      password: ${DATABASE_PASSWORD}
-    jpa:
-      properties:        hibernate:
-          dialect: org.hibernate.dialect.MySQL8Dialect
-          # dialect: org.hibernate.dialect.MySQL57Dialect
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    generate-ddl: true
+    hibernate:      ddl-auto: create
+    properties:      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        # dialect: org.hibernate.dialect.MySQL57Dialect
 server:
-    port: 8080
+  port: 8080
 servlet:
-    context-path: /food-api
+  context-path: /food-api

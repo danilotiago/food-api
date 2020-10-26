@@ -4,6 +4,7 @@ spring:
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
   jpa:
+    show-sql: true
     generate-ddl: true
     hibernate:      ddl-auto: create
     properties:      hibernate:

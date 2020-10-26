@@ -1,3 +1,12 @@
+spring:
+    datasource:
+      url: ${DATABASE_URL}
+      username: ${DATABASE_USERNAME}
+      password: ${DATABASE_PASSWORD}
+    jpa:
+      properties:        hibernate:
+          dialect: org.hibernate.dialect.MySQL8Dialect
+          # dialect: org.hibernate.dialect.MySQL57Dialect
 server:
     port: 8080
 servlet:

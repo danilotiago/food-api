@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,6 +24,7 @@ public class Restaurante {
 
 	// muitos restaurantes possui uma unica cozinha
 	@ManyToOne
+//	@JoinColumn(name = "cozinha_id") // caso seja outro nome fora do padrao
 	private Cozinha cozinha;
 
 	public Integer getId() {

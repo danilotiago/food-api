@@ -17,9 +17,10 @@ public class Restaurante {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
+	@Column(nullable = false)
 	private String nome;
 
-	@Column(name = "taxa_frete")
+	@Column(name = "taxa_frete", nullable = false)
 	private Double taxaFrete;
 
 	// muitos restaurantes possui uma unica cozinha
